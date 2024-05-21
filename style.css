@@ -1,0 +1,314 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* -----------------heading----------------------------- */
+h1{
+    text-align: center;
+    margin: 20px 0;
+    padding: 5px;
+}
+span{
+    color: white;
+    text-shadow: 0px 0px 10px #000 ,
+                0px 0px 10px #000 ;
+}
+/* _______________click Buttons_________________________ */
+
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    background-color: aqua;
+    height: 10vw;
+    width: 10vw;
+    font-size: 1.5vw;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: all .2s ease-in-out 50ms; 
+}
+
+#stone{
+    background-image: url(gameImages/rock.jpg);
+    background-size: cover;
+    color: white;
+    border: 3px solid black;
+    text-shadow: 0px 0px 10px #fff ,
+                0px 0px 10px #fff ;
+    box-shadow: 5px 5px 10px #000;
+}
+
+#paper{
+    background-image: url(gameImages/paper.jpg);
+    background-size: cover;
+    color: #000;
+    border: 3px solid black;
+    text-shadow: 0px 0px 10px #fff ,
+                0px 0px 10px #fff ;
+    box-shadow: 5px 5px 10px #000;
+}
+
+#scissors{
+    background-image: url(gameImages/scissors.png);
+    background-size: cover;
+    color: #fff;
+    border: 3px solid black;
+    text-shadow: 0px 0px 10px #000 ,
+                0px 0px 10px #000 ;
+    box-shadow: 5px 5px 10px #000;
+}
+/* ----actions----- */
+.btn:hover{
+    border-radius: 50%;
+
+}
+.btn:active{
+    transform: scale(1.3);
+
+}
+/* ___________________________Buttons end_______________________________________ */
+
+.line{
+    background-color: rgb(196, 179, 179);
+    height: 1px;
+}
+h2{
+    text-align: center;
+    margin: 20px 0;
+    padding: 5px;
+}
+/* -----------------(GamePlay) view area------------------ */
+#choice{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#mychoice{
+    height: 25vw;
+    width: 25vw;
+    border: 2px solid black;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px #000;
+
+}
+#ComputerChoice{
+    height: 25vw;
+    width: 25vw;
+    border: 2px solid black;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px #000;
+
+}
+/* -----------------GamePlay area ends------------------ */
+/* --------------Score board / reset btn----------------- */
+
+#midBox{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 2vw;
+    border: 2px solid black;
+}
+#scores{
+    display: flex;
+    flex-direction: column;
+}
+.Reloadbtn{
+    height: 3vw;
+    border: 2px solid black;
+    border-radius: 2vw;
+}
+h4 {
+    color: grey;
+    text-align: center;
+    padding: 0.5vw;
+    font-size: 3vw;
+    border-top: 1px solid aqua;
+    border-bottom: 1px solid aqua;
+}
+#yourScore ,#computerScore{
+    color: #fff;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 800;
+}
+.Reloadbtn{
+    font-size: 2vw;
+    font-weight: 700;
+    background-color:rgb(8, 224, 8);
+}
+.Reloadbtn:hover{
+    text-transform: uppercase;
+    transform: scale(1.05);
+
+}
+.Reloadbtn:active{
+    background-color: aqua;
+}
+/* -------------------Result popup-------------------------------- */
+
+#GameOver{
+    width: 35vw;
+    height: 30vw;
+    background-color: skyblue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform:translate(-50%,-50%) ;
+}
+#WinLose{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    position: relative;
+    top: -15%;
+}
+#Status{
+    width: 25vw;
+    height: 5vw;
+    top: -20%;
+    position: relative;
+    color: red;
+
+}
+#points{
+    width: 25vw;
+    height: 5vw;
+    font-size: 3vw;
+    position: relative;
+    text-align: center;
+    top: -25%;
+}
+.Replay{
+    width: 20vw;
+    height: 5vw;
+    font-size: 3vw;
+    border-radius: 10px;
+    background: red;
+    text-align: center;
+    position: relative;
+    top: -15%;
+ 
+}
+.Replay:hover{
+   text-transform: uppercase;
+    background: orangered;
+}
+.Replay:active{
+    background-color: aqua;
+ }
+/* +++++++++++++++++++++++++Resonsiveness+++++++++++++++++++++++++ */
+
+@media(max-width: 640px){
+
+    .btn{
+        background-color: aqua;
+        height: 14vh;
+        width: 14vh;
+        border-radius: 10px;
+    }
+    #choice{
+        margin-top: 20px;
+        display: grid;
+        column-gap: 0;
+        row-gap: 4vw;
+        grid-template-columns: repeat(2 ,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    #mychoice{
+        margin: 20px;
+        height: 35vw;
+        width: 35vw;
+        grid-column: 1/3;
+    }
+    #ComputerChoice{
+        margin: 20px;
+        height: 35vw;
+        width: 35vw;
+        grid-column: 3/5;
+        grid-row: 1/3;
+    } 
+
+    #midBox{
+        margin: 20px;
+        width: 1fr;
+        height: 20vw;
+        grid-column: 1/5;
+        grid-row: 2/3;
+    
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    
+    }
+    #scores{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        align-items: center;
+    
+    }
+    .Reloadbtn{
+        height: 18vw;
+        width: 18vw;
+        font-size: 5vw;
+        align-self: center;
+        margin: 4px;
+    }
+    h4 {
+        height: 19vw;
+        width: 20vw;
+        font-size: 6vw;
+        border: none;
+        align-content: space-around;
+        border-left:1px solid aqua;
+        border-right:1px solid aqua;
+    
+    }
+    #yourScore ,#computerScore{
+        color: #fff;
+        text-align: center;
+        font-size: 10vw;
+        font-weight: 800;
+    }
+
+    
+#GameOver{
+    width: 55vw;
+    height: 60vw;
+}
+#WinLose{
+    width: 20vw;
+    height: 20vw;
+    top: -20%;
+}
+#Status{
+    width: 25vw;
+    height: 9vw;
+    font-size: 4.5vw;
+    color: red;
+}
+#points{
+    width: 30vw;
+    height: 15vw;
+    font-size: 5vw;
+}
+.Replay{
+    width: 40vw;
+    height: 15vw;
+    font-size: 5vw;
+}
+.Replay:hover{
+   text-transform: uppercase;
+    background: orangered;
+}
+.Replay:active{
+    background-color: aqua;
+ }
+}

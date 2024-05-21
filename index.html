@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StonePaperScissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mainSection">
+    <h1>LET'S PLAY <span> STONE </span><b>-</b><span> PAPER </span><b>-</b><span> SCISSORS</span></h1>
+    <div id="buttons">
+        <button class="btn" id="stone" onclick="changeToStone()">STONE</button>
+        <button class="btn" id="paper" onclick="changeToPaper()">PAPER</button>
+        <button class="btn" id="scissors" onclick="changeToScissors()">SCISSORS</button>
+    </div>
+    </div>
+    <h2>*Match is Best of 5 , Make your choice &#128513;</h2>
+    <div class="line"></div>
+
+    <div id="choice">
+        <img id="mychoice" src="gameImages/Screenshot 2024-05-21 220441.png" alt="Your choice">
+        <div id="midBox">
+            <button class="Reloadbtn" onclick="Reload()">Reset</button>
+            <div id="scores">
+                <h4>You</h4>
+                <h5 id="yourScore"></h5>
+                <h4>Comp</h4>
+                <h5 id="computerScore"></h5>
+            </div>
+        </div>
+        <img id="ComputerChoice" src="gameImages/Screenshot 2024-05-21 010204.png" alt="Computer's choice">
+    </div>
+
+    <div id="GameOver" style="visibility: hidden;">
+        <img id="WinLose" src="" alt="Status">
+        <h2 id="Status"></h2>
+        <p id="points"></p>
+        <button class="Replay" onclick="Reload()">Replay</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
