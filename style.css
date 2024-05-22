@@ -237,7 +237,7 @@ h4 {
         grid-row: 1/3;
     } 
     .btn:hover{
-        border-radius: 30px;
+        border-radius: 10px;
     }
     .btn:active{
         transform: scale(0.8);
