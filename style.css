@@ -194,6 +194,7 @@ h4 {
     height: 5vw;
     font-size: 3vw;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px red ;
     background: red;
     text-align: center;
     position: relative;
