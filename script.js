@@ -92,6 +92,7 @@ function Reload(){
 // ---------------------------------popup---------------------------------
 function GameOver(){
     if(computerScore + yourScore === 5){
+        document.querySelector('.Background').style.visibility= 'hidden';
         document.querySelector('#GameOver').style.visibility = 'visible';
         if(yourScore > computerScore ){
             let img = document.getElementById('WinLose');
